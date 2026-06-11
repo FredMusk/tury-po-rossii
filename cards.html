@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Карточки туров - Россия</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2 class="page-title">Популярные туры по России</h2>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/baikal.jpg" class="card-img-top" alt="Байкал"
+                        onerror="this.src='https://via.placeholder.com/400x220?text=Байкал'">
+                    <div class="card-body">
+                        <h5 class="card-title">Байкал</h5>
+                        <p class="card-text">Глубочайшее озеро в мире. Длительность: 7 дней. Цена: от 35000 руб.</p>
+                        <div id="baikalInfo" style="display:none; margin-top: 10px;">Глубочайшее озеро в мире. Находится
+                            в Сибири. Чистейшая вода и уникальная природа.</div>
+                        <button class="btn-success" onclick="toggleInfo('baikalInfo', this)">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/altai.jpg" class="card-img-top" alt="Алтай"
+                        onerror="this.src='https://via.placeholder.com/400x220?text=Алтай'">
+                    <div class="card-body">
+                        <h5 class="card-title">Горный Алтай</h5>
+                        <p class="card-text">Горы, реки, Чуйский тракт. Длительность: 10 дней. Цена: от 42000 руб.</p>
+                        <div id="altaiInfo" style="display:none; margin-top: 10px;">Горный Алтай - это удивительное
+                            место с высокими горами, быстрыми реками и чистейшим воздухом. Здесь находится знаменитый
+                            Чуйский тракт и множество живописных перевалов.</div>
+                        <button class="btn-success" onclick="toggleInfo('altaiInfo', this)">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/kamchatka.jpg" class="card-img-top" alt="Камчатка"
+                        onerror="this.src='https://via.placeholder.com/400x220?text=Камчатка'">
+                    <div class="card-body">
+                        <h5 class="card-title">Камчатка</h5>
+                        <p class="card-text">Вулканы, гейзеры, медведи. Длительность: 12 дней. Цена: от 85000 руб.</p>
+                        <div id="kamchatkaInfo" style="display:none; margin-top: 10px;">Камчатка - край вулканов и
+                            гейзеров. Здесь можно увидеть действующие вулканы, долину гейзеров и бурых медведей в
+                            естественной среде обитания.</div>
+                        <button class="btn-success" onclick="toggleInfo('kamchatkaInfo', this)">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-links">
+            <a href="snippet.html">Главная</a> |
+            <a href="carusel.html">Фотолента</a> |
+            <a href="gallery.html">Галерея</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleInfo(infoId, button) {
+            var div = document.getElementById(infoId);
+            if (div.style.display == 'none') {
+                div.style.display = 'block';
+                button.innerHTML = 'Скрыть';
+            } else {
+                div.style.display = 'none';
+                button.innerHTML = 'Подробнее';
+            }
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
